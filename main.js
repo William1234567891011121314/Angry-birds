@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const body = document.querySelector("body")
 const btToggleMenu = body.querySelector(".menu-hamburger")
 
 btToggleMenu.addEventListener("click", () => {
@@ -14,7 +14,6 @@ btModal.addEventListener('click', () => dialog.showModal())
 
 document.querySelectorAll("dialog button").forEach(
   bt => bt.addEventListener("click", () => 
-    body.style.--
     dialog.close()
   )
 )
