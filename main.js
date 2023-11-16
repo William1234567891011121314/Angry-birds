@@ -11,7 +11,7 @@ const btModal = body.querySelector(".bt-modal")
 const h1dialog = dialog.querySelector("h1")
 const info = dialog.querySelector("#info")
 
-btModal.addEventListener('click', () => {
+btModal.addEventListener('click', ev => {
   info.innerHTML=`
   <h1>Seleção de tema</h1>
   <p>Qual tema você gostaria de usar?</p>
@@ -25,7 +25,7 @@ btModal.addEventListener('click', () => {
 })
 
 btDialog.forEach(
-  (bt, index) => bt.addEventListener("click", async () => {
+  (bt, index) => bt.addEventListener("click", async ev => {
     const requestpsinfo = await fetch("psinfo.json")
     const psinfo = await requestpsinfo.json()
     info.innerHTML = `
@@ -38,7 +38,9 @@ btDialog.forEach(
           <button data-theme="light">Fechar</button>
       </div>
     `
+    dialog.style.top = ev.PageY + "px"
     dialog.classList.add("dialog")
+    console.log(ev)
     dialog.show()
   })
 )
