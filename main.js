@@ -6,7 +6,7 @@ btToggleMenu.addEventListener("click", () => {
 })
 
 const dialog = body.querySelector("dialog")
-const btDialog = body.querySelectorAll(".bt-dialog")
+const btDialog = body.querySelectorAll("#bt-dialog")
 const btModal = body.querySelector(".bt-modal")
 const h1dialog = dialog.querySelector("h1")
 const info = dialog.querySelector("#info")
@@ -22,6 +22,7 @@ btModal.addEventListener('click', ev => {
   `
   dialog.classList.remove("dialog")
   dialog.showModal()
+  dialog.classList.add("dialog-open")
 })
 
 btDialog.forEach(
@@ -38,10 +39,10 @@ btDialog.forEach(
           <button data-theme="light">Fechar</button>
       </div>
     `
-    dialog.style.top = ev.PageY + "px"
+    dialog.style.top = ev.pageY - ev.clientY + "px"
     dialog.classList.add("dialog")
-    console.log(ev)
     dialog.show()
+    dialog.classList.add("dialog-open")
   })
 )
 dialog.querySelectorAll("dialog button").forEach(
