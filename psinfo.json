@@ -1,0 +1,38 @@
+[
+    {
+        "tamanho":"Grande",
+        "Gênero":"Masculino",
+        "Força":"Muito forte",
+        "Habilidade":"Explosão"
+    },
+    {
+        "tamanho":"Médio",
+        "Gênero":"Masculino",
+        "Força":"Médio",
+        "Habilidade":"Acelerar"
+    },
+    {
+        "tamanho":"Médio",
+        "Gênero":"Feminino",
+        "Força":"Leve",
+        "Habilidade":"Jogar ovos explosivos"
+    },
+    {
+        "tamanho":"Médio",
+        "Gênero":"Masculino",
+        "Força":"Médio para leve",
+        "Habilidade":"Grito de guerra"
+    },
+    {
+        "tamanho":"Muito grande",
+        "Gênero":"Masculino",
+        "Força":"Gigantesca",
+        "Habilidade":"Esmagar"
+    },
+    {
+        "tamanho":"Pequeno",
+        "Gênero":"Masculino",
+        "Força":"Leve",
+        "Habilidade":"Multiplicar-se por 3"
+    }
+]

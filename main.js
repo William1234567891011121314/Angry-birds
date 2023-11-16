@@ -6,13 +6,43 @@ btToggleMenu.addEventListener("click", () => {
 })
 
 const dialog = body.querySelector("dialog")
-const btDialog = body.querySelector(".bt-dialog")
+const btDialog = body.querySelectorAll(".bt-dialog")
 const btModal = body.querySelector(".bt-modal")
+const h1dialog = dialog.querySelector("h1")
+const info = dialog.querySelector("#info")
 
-btDialog.addEventListener('click', () => dialog.show())
-btModal.addEventListener('click', () => dialog.showModal())
+btModal.addEventListener('click', () => {
+  info.innerHTML=`
+  <h1>Seleção de tema</h1>
+  <p>Qual tema você gostaria de usar?</p>
+  <div class="action">
+    <button data-theme="dark">Escuro</button>
+    <button data-theme="light">Claro</button> 
+  </div>
+  `
+  dialog.classList.remove("dialog")
+  dialog.showModal()
+})
 
-document.querySelectorAll("dialog button").forEach(
+btDialog.forEach(
+  (bt, index) => bt.addEventListener("click", async () => {
+    const requestpsinfo = await fetch("psinfo.json")
+    const psinfo = await requestpsinfo.json()
+    info.innerHTML = `
+      <h1>Estatísticas</h1>
+      <p>Tamanho: ${psinfo[index]["tamanho"]}</p>
+      <p>Gênero: ${psinfo[index]["Gênero"]}</p>
+      <p>Força: ${psinfo[index]["Força"]}</p>
+      <p>Habilidade: ${psinfo[index]["Habilidade"]}</p>
+      <div class="action">
+          <button data-theme="light">Fechar</button>
+      </div>
+    `
+    dialog.classList.add("dialog")
+    dialog.show()
+  })
+)
+dialog.querySelectorAll("dialog button").forEach(
   bt => bt.addEventListener("click", () => 
     dialog.close()
   )

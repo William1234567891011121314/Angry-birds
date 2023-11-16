@@ -20,7 +20,7 @@
 
 :root {
     --menu-width: 450px;
-    --margin: 50px;
+    --margin: 10%;
     --divcolor: rgb(255, 255, 255, .7);
 }
 
@@ -81,7 +81,6 @@
     backdrop-filter: blur(1.5px);
     transition: transform .6s;
     transform: translateX(-100%);
-
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -135,17 +134,44 @@ header>h1 {
 }
 
 main {
+    display: flex;
     min-height: calc(100dvh - 200px);
     margin: var(--margin);
     background-color: var(--divcolor);
     backdrop-filter: blur(1.5px);
+    align-items: center;
+    flex-direction: column;
     & section {
         padding: 2%;
         & p{
             text-align: justify;
         }
     }
+    & #personagens{
+        background-color: antiquewhite;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin: calc(var(--margin) / 4);
+        height: fit-content;
+        width: fit-content;
+        & div {
+            position: relative;
+            width: 100%;
+            & img {
+                width: 100%;
+                height: fit-content;
+                max-height: 15vw;
+                max-width: 15vw;
+            }
+            & button {
+                position: absolute;
+                width: fit-content                              ;
+            }
+        }
+    }
 }
+
 body {
     background-image: url(./Assets/Images/angy-birds\ background-image.jpg);
     background-repeat: no-repeat;
@@ -216,4 +242,15 @@ dialog:modal .action {
 dialog:modal::backdrop {
     backdrop-filter: blur(2.5px);
     background-color: var(--divcolor);
+}
+.dialog {
+
+    background-color: rgba(245, 245, 220, .6);
+    backdrop-filter: blur(1.5px);
+    font-family: Arial, Helvetica, sans-serif;
+    & form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

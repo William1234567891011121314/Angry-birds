@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="main.css">
     <script async defer src="main.js"></script>
+    <script async defer src="dialog.js"></script>
 </head>
 <body>
     <button class="menu-hamburger">
@@ -41,12 +42,12 @@
         </a>
     </nav>
     <header>
-        <h1>Menu Hamburger</h1>
+        <h1>Angry Birds</h1>
     </header>
     <main>
         <section>
             <dialog>
-                <form>
+                <form id="info">
                     <h1>Seleção de tema</h1>
                     <p>Você gostaria de utilizar qual tema?</p>
                     <div class="action">
@@ -55,7 +56,6 @@
                     </div>
                 </form>
             </dialog>
-            <button class="bt-dialog">Dialog</button>
             <button class="bt-modal">Modal</button>
             <h2 id="anchor_1">Introdução</h2>
             <p>
@@ -116,6 +116,32 @@
                 Em junho de 2013, Rovio e a NASA abriram um parque temático de Angry Birds Space no Center Espacial John F. Kennedy chamado "Angry Birds Space Encounter". Ele possui várias experiências para o jogo Angry Birds Space, como a criação de personagens e fotografar pássaros e porcos. A atração também foi aberta no Centro Espacial Lyndon Johnson.
             </p>
         </section>
+        <div id="personagens">
+            <div>
+                <button class="bt-dialog"><p>Info</p></button>
+                <img src="./Assets/Images/Bomb.webp">
+            </div>
+            <div>
+                <button class="bt-dialog"><p>Info</p></button>
+                <img src="./Assets/Images/Chuck.webp">
+            </div>
+            <div>
+                <button class="bt-dialog"><p>Info</p></button>
+                <img src="./Assets/Images/matilde.jpg">
+            </div>
+            <div>
+                <button class="bt-dialog"><p>Info</p></button>
+                <img src="./Assets/Images/Red.webp">
+            </div>
+            <div>
+                <button class="bt-dialog"><p>Info</p></button>
+                <img src="./Assets/Images/Terêncio.webp">
+            </div>
+            <div>
+                <button class="bt-dialog"><p>Info</p></button>
+                <img src="./Assets/Images/The-blues.webp">
+            </div>
+        </div>
     </main>
     <footer>
         Rodapé
