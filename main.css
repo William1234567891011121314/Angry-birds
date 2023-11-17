@@ -190,15 +190,27 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    
 }
 
 footer {
     margin: var(--margin);
     padding: var(--padding);
     background-color: var(--divcolor);
-    & div {
+    & span {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        & div {
+            display: flex;
+            flex-direction: column;
+            & a:hover {
+                background-color: rgba(128, 128, 128, .5);
+            }
+            & a {
+                text-align: center;
+                color: black;
+            }
+        }
     }
 }
 
