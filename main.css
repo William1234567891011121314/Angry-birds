@@ -87,9 +87,6 @@
     gap: .5rem;
     overflow: auto;
     z-index: 5;
-    & button {
-        border: 0;
-    }
 }
 
 .main-menu :is(button, a) {
@@ -197,6 +194,12 @@ footer {
     margin: var(--margin);
     padding: var(--padding);
     background-color: var(--divcolor);
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    & h1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
     & span {
         display: grid;
         grid-template-columns: 1fr 1fr;
